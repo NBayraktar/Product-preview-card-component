@@ -33,29 +33,23 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Product preview card component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <div class="container">
-      <header>
+      <header class="header">
         <img
-          class="image"
+          class="image-mobile"
           src="images/image-product-mobile.jpg"
           alt="Image of parfume CHANEL Gabrielle"
         />
+        <img
+          class="image-desktop"
+          src="images/image-product-desktop.jpg"
+          alt="Image of parfume CHANEL Gabrielle"
+        />
       </header>
-      <main>
-        <h4>Perfume</h4>
+      <main class="main">
+        <p class="parfume-text">Perfume</p>
         <h1>Gabrielle Essence Eau De Parfum</h1>
         <p class="main-text">
           A floral, solar and voluptuous interpretation composed by Olivier
@@ -67,10 +61,11 @@
         </div>
         <button class="btn">
           <img
-            class="cart-icon"
+            class="btn-icon"
             src="images/icon-cart.svg"
             alt="cart icon image"
-          />Add to Cart
+          />
+          <p class="btn-text">Add to Cart</p>
         </button>
       </main>
     </div>

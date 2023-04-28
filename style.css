@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: hsl(30, 38%, 92%);
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/***** Typography *****/
+p {
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+
+h1 {
+  color: hsl(212, 21%, 14%);
+  margin: 0.5em 0;
+  line-height: 1;
+}
+
+h1,
+.new-price {
+  font-family: 'Fraunces', serif;
+}
+.parfume-text {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.main-text {
+  line-height: 1.5;
+  text-align: left;
+}
+
+.btn-text {
+  color: hsl(0, 0%, 100%);
+}
+
+.new-price {
+  font-size: 1.8rem;
+  color: hsl(158, 36%, 37%);
+  margin-right: 0.7em;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+/***** Button *****/
+.btn {
+  width: 100%;
+  padding: 1em;
+  border: none;
+  border-radius: 6px;
+  background: hsl(158, 36%, 37%);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn:hover {
+  background: hsl(212, 21%, 14%);
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.btn-icon {
+  width: 15px;
+}
+
+/***** Layout *****/
+.container {
+  max-width: 1440px;
+  margin: 15em auto;
+  background: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+
+.image-mobile {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.image-desktop {
+  display: none;
+}
+
+.main {
+  padding: 1.5em;
+}
+
+.price-wraper {
+  display: flex;
+  align-items: center;
+  margin: 1.5em 0;
+}
+
+/***** Footer *****/
+.attribution {
+  font-size: 11px;
+  width: 98%;
+  text-align: center;
+  position: fixed;
+  bottom: 1em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/***** Media Queries *****/
+@media (min-width: 550px) {
+  .container {
+    display: flex;
+  }
+
+  .header,
+  .main {
+    width: 50%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image-mobile {
+    display: none;
+  }
+
+  .image-desktop {
+    display: block;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  h1 {
+    font-size: 3vw;
+  }
+
+  .parfume-text,
+  .main-text {
+    font-size: 1.5vw;
+  }
+}
