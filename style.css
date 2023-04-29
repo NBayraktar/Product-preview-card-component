@@ -13,12 +13,14 @@ body {
 /***** Typography *****/
 p {
   color: hsl(228, 12%, 48%);
+  font-size: 1rem;
   font-weight: 500;
 }
 
 h1 {
+  font-size: 2.2rem;
   color: hsl(212, 21%, 14%);
-  margin: 0.5em 0;
+  margin: 0.7em 0;
   line-height: 1;
 }
 
@@ -26,6 +28,7 @@ h1,
 .new-price {
   font-family: 'Fraunces', serif;
 }
+
 .parfume-text {
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -41,9 +44,9 @@ h1,
 }
 
 .new-price {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: hsl(158, 36%, 37%);
-  margin-right: 0.7em;
+  margin-right: 1em;
 }
 
 .old-price {
@@ -64,7 +67,7 @@ h1,
 }
 
 .btn:hover {
-  background: hsl(212, 21%, 14%);
+  background: hsl(158, 36%, 20%);
   transition: 0.1s;
   cursor: pointer;
 }
@@ -75,19 +78,28 @@ h1,
 
 /***** Layout *****/
 .container {
-  max-width: 1440px;
+  max-width: 600px;
+  height: 450px;
   margin: 15em auto;
   background: hsl(0, 0%, 100%);
   border-radius: 10px;
+  display: flex;
+  box-shadow: 5px 10px 18px hsl(228, 12%, 60%);
+}
+
+.header,
+.main {
+  width: 50%;
 }
 
 .image-mobile {
-  width: 100%;
-  border-radius: 10px 10px 0 0;
+  display: none;
 }
 
 .image-desktop {
-  display: none;
+  display: block;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
 }
 
 .main {
@@ -108,43 +120,41 @@ h1,
   position: fixed;
   bottom: 1em;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
 /***** Media Queries *****/
-@media (min-width: 550px) {
+@media (max-width: 610px) {
   .container {
-    display: flex;
+    width: 350px;
+    height: 610px;
+    flex-direction: column;
+  }
+
+  .image-mobile {
+    display: block;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .image-desktop {
+    display: none;
   }
 
   .header,
   .main {
-    width: 50%;
-  }
-
-  .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .image-mobile {
-    display: none;
-  }
-
-  .image-desktop {
-    display: block;
     width: 100%;
-    border-radius: 10px 0 0 10px;
   }
 
-  h1 {
-    font-size: 3vw;
+  h1,
+  .new-price {
+    font-size: 1.7rem;
+    margin: 0.5em 0;
   }
 
-  .parfume-text,
-  .main-text {
-    font-size: 1.5vw;
+  .new-price {
+    margin: 0;
   }
 }
